@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    image: php:8.4.25-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_PASS=secret123
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: app_db
