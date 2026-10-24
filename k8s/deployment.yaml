@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: php:8.4.25-apache
+        image: php:8.4.27-apache
         ports:
         - containerPort: 80
         env:
